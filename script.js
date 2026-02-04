@@ -1,7 +1,7 @@
 let questions = [];
 let currentQuestion = null;
-let timer = null;
-let countdown = null;
+let timerTimeout = null;
+let timerInterval = null;
 const TIME_LIMIT = 30; // secondes
 
 // Charger les questions depuis JSON
@@ -21,28 +21,35 @@ fetch('questions.json')
 
 // Afficher une nouvelle question
 function showNewQuestion() {
-  clearTimeout(timer);
-  clearInterval(countdown);
+  // Arrêter tout ancien timer
+  clearTimeout(timerTimeout);
+  clearInterval(timerInterval);
 
+  // Tirage aléatoire
   currentQuestion = questions[Math.floor(Math.random() * questions.length)];
 
+  // Affichage question + réponse vide
   document.getElementById('question').innerText = currentQuestion.question;
   document.getElementById('answer').innerText = '';
 
-  // Timer affiché
+  // Initialiser le compteur
   let timeLeft = TIME_LIMIT;
   document.getElementById('timer').innerText = timeLeft;
 
-  countdown = setInterval(() => {
+  // Lancer l'intervalle pour décompte
+  timerInterval = setInterval(() => {
     timeLeft--;
     document.getElementById('timer').innerText = timeLeft;
+
     if (timeLeft <= 0) {
-      clearInterval(countdown);
+      clearInterval(timerInterval);
     }
   }, 1000);
 
-  // Afficher réponse automatiquement au bout de TIME_LIMIT secondes
-  timer = setTimeout(showAnswer, TIME_LIMIT * 1000);
+  // Afficher réponse automatiquement après TIME_LIMIT secondes
+  timerTimeout = setTimeout(() => {
+    showAnswer();
+  }, TIME_LIMIT * 1000);
 }
 
 // Afficher la réponse
@@ -50,7 +57,8 @@ function showAnswer() {
   if (currentQuestion) {
     document.getElementById('answer').innerText = currentQuestion.answer;
   }
-  clearInterval(countdown);
+  // Stopper le compteur si encore actif
+  clearInterval(timerInterval);
   document.getElementById('timer').innerText = "0";
 }
 
