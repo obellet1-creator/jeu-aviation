@@ -1,16 +1,41 @@
-// Charger les questions
+let questions = [];
+let currentQuestion;
+
+// Charger les questions depuis questions.json
 fetch('questions.json')
   .then(response => response.json())
   .then(data => {
-    // Tirage aléatoire d'une question
-    const question = data[Math.floor(Math.random() * data.length)];
-    document.getElementById('question').innerText = question.question;
-
-    // Afficher la réponse au clic
-    document.getElementById('showAnswer').addEventListener('click', () => {
-      document.getElementById('answer').innerText = question.answer;
-    });
+    questions = data;
+    showNewQuestion(); // Afficher la première question
   })
   .catch(error => console.error('Erreur:', error));
+
+function showNewQuestion() {
+  // Tirage aléatoire d'une question
+  currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+  document.getElementById('question').innerText = currentQuestion.question;
+  document.getElementById('answer').innerText = '';
+
+  // Supprimer les anciens timers s'il y en avait
+  clearTimeout(window.answerTimer);
+
+  // Lancer timer de 30 secondes pour afficher la réponse automatiquement
+  window.answerTimer = setTimeout(() => {
+    document.getElementById('answer').innerText = currentQuestion.answer;
+  }, 30000); // 30000 ms = 30 secondes
+}
+
+// Bouton "Afficher la réponse"
+document.getElementById('showAnswer').addEventListener('click', () => {
+  clearTimeout(window.answerTimer); // Arrêter le timer si cliqué avant
+  document.getElementById('answer').innerText = currentQuestion.answer;
+});
+
+// Bouton "Nouvelle question"
+document.getElementById('nextQuestion').addEventListener('click', () => {
+  showNewQuestion();
+});
+
+
 
 
