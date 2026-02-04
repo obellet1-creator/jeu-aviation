@@ -2,7 +2,7 @@ let questions = [];
 let currentQuestion = null;
 let timerTimeout = null;
 let timerInterval = null;
-const TIME_LIMIT = 30; // secondes
+const TIME_LIMIT = 25; // secondes
 
 // Charger les questions depuis JSON
 fetch('questions.json')
@@ -67,3 +67,4 @@ document.getElementById('showAnswer').addEventListener('click', showAnswer);
 
 // Bouton : nouvelle question
 document.getElementById('nextQuestion').addEventListener('click', showNewQuestion);
+
