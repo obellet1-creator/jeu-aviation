@@ -1,23 +1,94 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<title>Quiz Aviation</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Jeu Aviation – Question</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eaf2f8;
+      color: #1c2833;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #154360;
+    }
+
+    #question {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      min-height: 60px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 12px 18px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #2874a6;
+      color: white;
+    }
+
+    button:hover {
+      background: #1f618d;
+    }
+
+    #answer {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      min-height: 40px;
+      color: #1b4f72;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Question Aviation</h1>
-  <div id="question" style="margin-bottom: 10px;"></div>
+  <div class="container">
+    <h1>✈️ Question Aviation</h1>
 
-  <button id="showAnswer">Afficher la réponse</button>
-  <button id="nextQuestion">Nouvelle question</button>
+    <div id="question">
+      Chargement de la question…
+    </div>
 
-  <div id="answer" style="margin-top:10px; font-weight:bold;"></div>
+    <div class="buttons">
+      <button id="showAnswer">Afficher la réponse</button>
+      <button id="nextQuestion">Nouvelle question</button>
+    </div>
+
+    <div id="answer"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
