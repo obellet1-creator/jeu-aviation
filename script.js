@@ -2,15 +2,22 @@ let questions = [];
 let currentQuestion = null;
 let timerTimeout = null;
 let timerInterval = null;
-const TIME_LIMIT = 25; // secondes
+const TIME_LIMIT = 30;
 
-// Charger les questions depuis JSON
+// Sélection des éléments
+const timerNumber = document.getElementById('timer-number');
+const timerCircle = document.getElementById('timer-circle');
+const circleRadius = 50;
+const circleCircumference = 2 * Math.PI * circleRadius;
+
+timerCircle.style.strokeDasharray = circleCircumference;
+timerCircle.style.strokeDashoffset = 0;
+
+// Charger les questions
 fetch('questions.json')
   .then(response => response.json())
   .then(data => {
-    if (!Array.isArray(data) || data.length === 0) {
-      throw new Error('questions.json vide ou invalide');
-    }
+    if (!Array.isArray(data) || data.length === 0) throw new Error('questions.json vide ou invalide');
     questions = data;
     showNewQuestion();
   })
@@ -19,9 +26,7 @@ fetch('questions.json')
     console.error(error);
   });
 
-// Afficher une nouvelle question
 function showNewQuestion() {
-  // Arrêter tout ancien timer
   clearTimeout(timerTimeout);
   clearInterval(timerInterval);
 
@@ -32,39 +37,45 @@ function showNewQuestion() {
   document.getElementById('question').innerText = currentQuestion.question;
   document.getElementById('answer').innerText = '';
 
-  // Initialiser le compteur
+  // Reset compteur
   let timeLeft = TIME_LIMIT;
-  document.getElementById('timer').innerText = timeLeft;
+  timerNumber.innerText = timeLeft;
+  timerCircle.style.strokeDashoffset = 0;
 
-  // Lancer l'intervalle pour décompte
+  // Intervalle pour le décompte visuel
   timerInterval = setInterval(() => {
     timeLeft--;
-    document.getElementById('timer').innerText = timeLeft;
+    timerNumber.innerText = timeLeft;
+
+    const offset = circleCircumference * (1 - timeLeft / TIME_LIMIT);
+    timerCircle.style.strokeDashoffset = offset;
 
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
     }
   }, 1000);
 
-  // Afficher réponse automatiquement après TIME_LIMIT secondes
-  timerTimeout = setTimeout(() => {
-    showAnswer();
-  }, TIME_LIMIT * 1000);
+  // Afficher réponse automatiquement
+  timerTimeout = setTimeout(showAnswer, TIME_LIMIT * 1000);
 }
 
-// Afficher la réponse
 function showAnswer() {
   if (currentQuestion) {
     document.getElementById('answer').innerText = currentQuestion.answer;
   }
-  // Stopper le compteur si encore actif
   clearInterval(timerInterval);
-  document.getElementById('timer').innerText = "0";
+  timerNumber.innerText = "0";
+  timerCircle.style.strokeDashoffset = circleCircumference;
+
+  // Flash rapide pour signaler la fin
+  timerCircle.style.transition = 'stroke 0.2s';
+  timerCircle.style.stroke = '#27ae60';
+  setTimeout(() => {
+    timerCircle.style.stroke = '#c0392b';
+    timerCircle.style.transition = 'stroke 0.3s';
+  }, 300);
 }
 
-// Bouton : afficher la réponse immédiatement
+// Boutons
 document.getElementById('showAnswer').addEventListener('click', showAnswer);
-
-// Bouton : nouvelle question
 document.getElementById('nextQuestion').addEventListener('click', showNewQuestion);
-
