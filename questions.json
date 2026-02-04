@@ -1,17 +1,86 @@
 [
   {
-    "question": "À quoi sert le nez basculant du Concorde ?",
-    "answer": "Il permet aux pilotes de mieux voir la piste lors de l’atterrissage."
+    "question": "Pourquoi les avions volent-ils ?",
+    "answer": "Grâce à la portance générée par les ailes."
   },
   {
-    "question": "Quelle est la vitesse d’un avion de ligne en croisière ?",
+    "question": "À quoi sert la tour de contrôle ?",
+    "answer": "À gérer le trafic aérien au sol et en vol."
+  },
+  {
+    "question": "Quelle vitesse atteint un avion de ligne en croisière ?",
     "answer": "Environ 850 à 900 km/h."
+  },
+  {
+    "question": "Quel est l’effet du vent de face sur le décollage ?",
+    "answer": "Il réduit la distance nécessaire pour décoller."
   },
   {
     "question": "Pourquoi les ailes d’un avion sont-elles courbées ?",
     "answer": "Pour créer une différence de pression et générer de la portance."
+  },
+  {
+    "question": "Qu’est-ce qu’un cockpit ?",
+    "answer": "La cabine de pilotage où se trouvent les instruments et les pilotes."
+  },
+  {
+    "question": "À quoi sert un radar dans l’aviation ?",
+    "answer": "À détecter la position d’autres avions et obstacles."
+  },
+  {
+    "question": "Que signifie la vitesse Mach 2 ?",
+    "answer": "Deux fois la vitesse du son."
+  },
+  {
+    "question": "Pourquoi un avion a-t-il un train d’atterrissage ?",
+    "answer": "Pour pouvoir décoller et atterrir sur la piste."
+  },
+  {
+    "question": "Quel est le rôle d’un pilote automatique ?",
+    "answer": "Maintenir l’avion sur sa trajectoire sans intervention continue du pilote."
+  },
+  {
+    "question": "Qu’est-ce que la portance ?",
+    "answer": "La force qui soulève l’avion dans les airs."
+  },
+  {
+    "question": "Pourquoi les avions ont-ils des volets sur les ailes ?",
+    "answer": "Pour augmenter la portance à basse vitesse, surtout au décollage et à l’atterrissage."
+  },
+  {
+    "question": "Qu’est-ce qu’un hydravion ?",
+    "answer": "Un avion qui peut décoller et atterrir sur l’eau."
+  },
+  {
+    "question": "Pourquoi le Concorde avait-il le nez basculant ?",
+    "answer": "Pour permettre aux pilotes de mieux voir la piste lors de l’atterrissage."
+  },
+  {
+    "question": "Quel est l’avantage d’un avion supersonique ?",
+    "answer": "Il peut voler plus vite que la vitesse du son, réduisant les temps de trajet."
+  },
+  {
+    "question": "À quoi servent les feux d’atterrissage ?",
+    "answer": "À rendre l’avion visible et guider le pilote lors de l’approche de la piste."
+  },
+  {
+    "question": "Pourquoi un avion peut-il rencontrer de la turbulence ?",
+    "answer": "À cause des mouvements d’air irréguliers dans l’atmosphère."
+  },
+  {
+    "question": "Qu’est-ce qu’un avion de chasse ?",
+    "answer": "Un avion rapide et maniable utilisé à des fins militaires."
+  },
+  {
+    "question": "Qu’est-ce qu’un altimètre ?",
+    "answer": "Un instrument qui indique l’altitude de l’avion par rapport au niveau de la mer."
+  },
+  {
+    "question": "Pourquoi les pilotes utilisent-ils des casques et masques ?",
+    "answer": "Pour communiquer et respirer correctement à haute altitude."
   }
 ]
+
 
 
 
