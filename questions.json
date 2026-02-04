@@ -4,5 +4,5 @@
   { "id": 3, "type": "incident", "question": "Problème moteur détecté, que faites-vous ?", "answer": "Réduire la poussée et vérifier les paramètres." }
   { "id": 5, "type": "incident", "question": "zut?", "answer": "45454Réduire la poussée et vérifier les paramètres." }
 ]
-]
+
 
