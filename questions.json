@@ -2,7 +2,8 @@
   { "id": 1, "type": "quiz", "question": "À quoi sert le nez basculant du Concorde ?", "answer": "Pour améliorer la visibilité lors de l'atterrissage." },
   { "id": 2, "type": "quiz", "question": "Quelle vitesse maximale atteint le Concorde ?", "answer": "Environ Mach 2, soit 2 150 km/h." },
   { "id": 3, "type": "incident", "question": "Problème moteur détecté, que faites-vous ?", "answer": "Réduire la poussée et vérifier les paramètres." }
-  { "id": 5, "type": "incident", "question": "zut?", "answer": "45454Réduire la poussée et vérifier les paramètres." }
+  { "id": 4, "type": "incident", "question": "zut?", "answer": "45454Réduire la poussée et vérifier les paramètres." }
 ]
+
 
 
