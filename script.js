@@ -1,45 +1,46 @@
 let questions = [];
 let currentQuestion = null;
 let timer = null;
-const TIME_LIMIT = 30; // secondes
+const TIME_LIMIT = 30;
 
-// Charger les questions depuis questions.json
 fetch('questions.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Impossible de charger questions.json');
+    }
+    return response.json();
+  })
   .then(data => {
+    if (!Array.isArray(data) || data.length === 0) {
+      throw new Error('questions.json est vide ou invalide');
+    }
     questions = data;
     showNewQuestion();
   })
   .catch(error => {
-    console.error('Erreur de chargement des questions :', error);
+    document.getElementById('question').innerText =
+      'Erreur de chargement des questions';
+    console.error(error);
   });
 
-// Afficher une nouvelle question
 function showNewQuestion() {
-  if (questions.length === 0) return;
+  clearTimeout(timer);
 
-  // Tirage aléatoire
   currentQuestion = questions[Math.floor(Math.random() * questions.length)];
 
-  // Affichage question
   document.getElementById('question').innerText = currentQuestion.question;
   document.getElementById('answer').innerText = '';
 
-  // Reset timer
-  clearTimeout(timer);
-
-  // Lancer timer de 30 secondes
-  timer = setTimeout(() => {
-    showAnswer();
-  }, TIME_LIMIT * 1000);
+  timer = setTimeout(showAnswer, TIME_LIMIT * 1000);
 }
 
-// Afficher la réponse
 function showAnswer() {
-  if (!currentQuestion) return;
-  document.getElementById('answer').innerText = currentQuestion.answer;
-  clearTimeout(timer);
+  if (currentQuestion) {
+    document.getElementById('answer').innerText = currentQuestion.answer;
+  }
 }
 
-// Bouton : afficher la réponse immédiatement
-document.getElemen
+document.getElementById('showAnswer').addEventListener('click', showAnswer);
+document.getElementById('nextQuestion').addEventListener('click', showNewQuestion);
+
+
