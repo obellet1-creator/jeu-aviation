@@ -1,5 +1,5 @@
 let questions = [];
-let currentQuestion = null;
+let currentIndex = 0;
 let timerTimeout = null;
 let timerInterval = null;
 const TIME_LIMIT = 30;
@@ -13,12 +13,22 @@ const circleCircumference = 2 * Math.PI * circleRadius;
 timerCircle.style.strokeDasharray = circleCircumference;
 timerCircle.style.strokeDashoffset = 0;
 
+// Fonction de shuffle (Fisher-Yates)
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
 // Charger les questions
 fetch('questions.json')
   .then(response => response.json())
   .then(data => {
     if (!Array.isArray(data) || data.length === 0) throw new Error('questions.json vide ou invalide');
     questions = data;
+    shuffleArray(questions); // Mélange les questions
+    currentIndex = 0;
     showNewQuestion();
   })
   .catch(error => {
@@ -30,8 +40,15 @@ function showNewQuestion() {
   clearTimeout(timerTimeout);
   clearInterval(timerInterval);
 
-  // Tirage aléatoire
-  currentQuestion = questions[Math.floor(Math.random() * questions.length)];
+  if (currentIndex >= questions.length) {
+    document.getElementById('question').innerText = 'Toutes les questions ont été posées !';
+    document.getElementById('answer').innerText = '';
+    timerNumber.innerText = '0';
+    timerCircle.style.strokeDashoffset = circleCircumference;
+    return;
+  }
+
+  const currentQuestion = questions[currentIndex];
 
   // Affichage question + réponse vide
   document.getElementById('question').innerText = currentQuestion.question;
@@ -56,13 +73,14 @@ function showNewQuestion() {
   }, 1000);
 
   // Afficher réponse automatiquement
-  timerTimeout = setTimeout(showAnswer, TIME_LIMIT * 1000);
+  timerTimeout = setTimeout(() => {
+    showAnswer(currentQuestion);
+  }, TIME_LIMIT * 1000);
 }
 
-function showAnswer() {
-  if (currentQuestion) {
-    document.getElementById('answer').innerText = currentQuestion.answer;
-  }
+function showAnswer(question = null) {
+  if (!question) question = questions[currentIndex];
+  document.getElementById('answer').innerText = question.answer;
   clearInterval(timerInterval);
   timerNumber.innerText = "0";
   timerCircle.style.strokeDashoffset = circleCircumference;
@@ -77,5 +95,9 @@ function showAnswer() {
 }
 
 // Boutons
-document.getElementById('showAnswer').addEventListener('click', showAnswer);
-document.getElementById('nextQuestion').addEventListener('click', showNewQuestion);
+document.getElementById('showAnswer').addEventListener('click', () => showAnswer());
+document.getElementById('nextQuestion').addEventListener('click', () => {
+  currentIndex++;
+  showNewQuestion();
+});
+
