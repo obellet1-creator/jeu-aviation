@@ -29,7 +29,7 @@
   {"question":"Quel général français devient célèbre pour son rôle en Amérique puis en France ?","answer":"Marquis de La Fayette."},
   {"question":"Quel est le système politique dominant en France au XVIIIᵉ siècle avant la Révolution ?","answer":"La monarchie absolue."},
   {"question":"Quel philosophe écrit sur la séparation des pouvoirs et influence la Révolution ?","answer":"Montesquieu."}
-{"question":"Quel roi français monte sur le trône en 1715 à l’âge de cinq ans ?","answer":"Louis XV."},
+  {"question":"Quel roi français monte sur le trône en 1715 à l’âge de cinq ans ?","answer":"Louis XV."},
   {"question":"Comment s'appelle le régent qui gouverne la France pendant la minorité de Louis XV ?","answer":"Philippe d’Orléans."},
   {"question":"Quel est le nom de la période de prospérité culturelle sous le règne de Louis XV ?","answer":"Le siècle des Lumières."},
   {"question":"Quel peintre célèbre illustre le style rococo à Versailles au XVIIIᵉ siècle ?","answer":"Jean-Antoine Watteau."},
@@ -59,7 +59,7 @@
   {"question":"Quel écrivain français écrit sur la séparation des pouvoirs et l’équilibre politique ?","answer":"Montesquieu."},
   {"question":"Quel grand conflit éclate en France à la fin du XVIIIᵉ siècle, marquant la fin de l’Ancien Régime ?","answer":"La Révolution française."},
   {"question":"Quel événement populaire de 1789 symbolise la révolte contre l’absolutisme ?","answer":"La prise de la Bastille le 14 juillet."}
-{"question":"Quel roi succède à Louis XIV en 1715 ?","answer":"Louis XV, son arrière-petit-fils."},
+  {"question":"Quel roi succède à Louis XIV en 1715 ?","answer":"Louis XV, son arrière-petit-fils."},
   {"question":"Qui assure la régence de France pendant la minorité de Louis XV ?","answer":"Philippe d’Orléans, le régent."},
   {"question":"Quel style artistique domine à Versailles au début du XVIIIᵉ siècle ?","answer":"Le style rococo."},
   {"question":"Quel peintre célèbre du XVIIIᵉ siècle est connu pour ses fêtes galantes ?","answer":"Jean-Antoine Watteau."},
@@ -89,7 +89,7 @@
   {"question":"Quel grand conflit européen touche la France entre 1740 et 1748 ?","answer":"La guerre de Succession d’Autriche."},
   {"question":"Quel écrivain français critique la religion et défend la tolérance ?","answer":"Voltaire."},
   {"question":"Quelle est la principale cause de la crise financière avant la Révolution ?","answer":"Les dépenses de la cour et des guerres coûteuses."}
-{"question":"Quel roi français est encore enfant lorsqu’il devient roi en 1715 ?","answer":"Louis XV."},
+  {"question":"Quel roi français est encore enfant lorsqu’il devient roi en 1715 ?","answer":"Louis XV."},
   {"question":"Quel régent dirige la France durant la minorité de Louis XV ?","answer":"Philippe d’Orléans."},
   {"question":"Quelle guerre oppose la France à l’Espagne et à l’Angleterre entre 1701 et 1714 ?","answer":"La guerre de Succession d’Espagne."},
   {"question":"Quel traité met fin à la guerre de Succession d’Espagne ?","answer":"Le traité d’Utrecht."},
@@ -121,5 +121,6 @@
   {"question":"Quel écrivain critique la religion et défend la tolérance dans 'Traité sur la tolérance' ?","answer":"Voltaire."},
   {"question":"Quelle est la cause principale de la crise financière avant la Révolution ?","answer":"Les dépenses excessives de la cour et les guerres coûteuses."}
 ]
+
 
 
