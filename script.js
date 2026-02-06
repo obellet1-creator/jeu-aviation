@@ -1,103 +1,114 @@
+// =======================
+// VARIABLES GLOBALES
+// =======================
 let questions = [];
-let currentIndex = 0;
-let timerTimeout = null;
+let currentQuestion = null;
+
+let timeLeft = 30;
 let timerInterval = null;
-const TIME_LIMIT = 30;
 
-// Sélection des éléments
-const timerNumber = document.getElementById('timer-number');
-const timerCircle = document.getElementById('timer-circle');
-const circleRadius = 50;
-const circleCircumference = 2 * Math.PI * circleRadius;
+const TOTAL_TIME = 30;
+const CIRCLE_LENGTH = 314; // 2 * PI * 50
 
-timerCircle.style.strokeDasharray = circleCircumference;
-timerCircle.style.strokeDashoffset = 0;
+// =======================
+// ÉLÉMENTS DOM
+// =======================
+const questionDiv = document.getElementById("question");
+const answerDiv = document.getElementById("answer");
 
-// Fonction de shuffle (Fisher-Yates)
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
+const showAnswerBtn = document.getElementById("showAnswer");
+const nextQuestionBtn = document.getElementById("nextQuestion");
 
-// Charger les questions
-fetch('questions.json')
+const timerNumber = document.getElementById("timer-number");
+const timerCircle = document.getElementById("timer-circle");
+
+// Dé virtuel
+const rollDiceBtn = document.getElementById("rollDice");
+const diceResult = document.getElementById("dice-result");
+
+// =======================
+// CHARGEMENT DES QUESTIONS
+// =======================
+fetch("questions.json")
   .then(response => response.json())
   .then(data => {
-    if (!Array.isArray(data) || data.length === 0) throw new Error('questions.json vide ou invalide');
     questions = data;
-    shuffleArray(questions); // Mélange les questions
-    currentIndex = 0;
-    showNewQuestion();
+    loadNewQuestion();
   })
   .catch(error => {
-    document.getElementById('question').innerText = 'Erreur de chargement des questions';
+    questionDiv.textContent = "Erreur de chargement des questions.";
     console.error(error);
   });
 
-function showNewQuestion() {
-  clearTimeout(timerTimeout);
-  clearInterval(timerInterval);
-
-  if (currentIndex >= questions.length) {
-    document.getElementById('question').innerText = 'Toutes les questions ont été posées !';
-    document.getElementById('answer').innerText = '';
-    timerNumber.innerText = '0';
-    timerCircle.style.strokeDashoffset = circleCircumference;
+// =======================
+// FONCTIONS PRINCIPALES
+// =======================
+function loadNewQuestion() {
+  if (questions.length === 0) {
+    questionDiv.textContent = "Aucune question disponible.";
     return;
   }
 
-  const currentQuestion = questions[currentIndex];
+  resetTimer();
 
-  // Affichage question + réponse vide
-  document.getElementById('question').innerText = currentQuestion.question;
-  document.getElementById('answer').innerText = '';
+  currentQuestion = questions[Math.floor(Math.random() * questions.length)];
 
-  // Reset compteur
-  let timeLeft = TIME_LIMIT;
-  timerNumber.innerText = timeLeft;
-  timerCircle.style.strokeDashoffset = 0;
+  questionDiv.textContent = currentQuestion.question;
+  answerDiv.textContent = "";
 
-  // Intervalle pour le décompte visuel
+  startTimer();
+}
+
+function showAnswer() {
+  if (currentQuestion) {
+    answerDiv.textContent = currentQuestion.answer;
+  }
+}
+
+// =======================
+// TIMER
+// =======================
+function startTimer() {
+  timeLeft = TOTAL_TIME;
+  updateTimerDisplay();
+
   timerInterval = setInterval(() => {
     timeLeft--;
-    timerNumber.innerText = timeLeft;
-
-    const offset = circleCircumference * (1 - timeLeft / TIME_LIMIT);
-    timerCircle.style.strokeDashoffset = offset;
+    updateTimerDisplay();
 
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
+      showAnswer();
     }
   }, 1000);
-
-  // Afficher réponse automatiquement
-  timerTimeout = setTimeout(() => {
-    showAnswer(currentQuestion);
-  }, TIME_LIMIT * 1000);
 }
 
-function showAnswer(question = null) {
-  if (!question) question = questions[currentIndex];
-  document.getElementById('answer').innerText = question.answer;
-  clearInterval(timerInterval);
-  timerNumber.innerText = "0";
-  timerCircle.style.strokeDashoffset = circleCircumference;
-
-  // Flash rapide pour signaler la fin
-  timerCircle.style.transition = 'stroke 0.2s';
-  timerCircle.style.stroke = '#27ae60';
-  setTimeout(() => {
-    timerCircle.style.stroke = '#c0392b';
-    timerCircle.style.transition = 'stroke 0.3s';
-  }, 300);
+function resetTimer() {
+  if (timerInterval) {
+    clearInterval(timerInterval);
+  }
+  timeLeft = TOTAL_TIME;
+  updateTimerDisplay();
 }
 
-// Boutons
-document.getElementById('showAnswer').addEventListener('click', () => showAnswer());
-document.getElementById('nextQuestion').addEventListener('click', () => {
-  currentIndex++;
-  showNewQuestion();
+function updateTimerDisplay() {
+  timerNumber.textContent = timeLeft;
+
+  const progress = timeLeft / TOTAL_TIME;
+  const offset = CIRCLE_LENGTH * (1 - progress);
+  timerCircle.style.strokeDashoffset = offset;
+}
+
+// =======================
+// ÉVÉNEMENTS
+// =======================
+showAnswerBtn.addEventListener("click", showAnswer);
+nextQuestionBtn.addEventListener("click", loadNewQuestion);
+
+// =======================
+// DÉ VIRTUEL
+// =======================
+rollDiceBtn.addEventListener("click", () => {
+  const value = Math.floor(Math.random() * 6) + 1;
+  diceResult.textContent = value;
 });
-
