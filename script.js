@@ -106,9 +106,13 @@ showAnswerBtn.addEventListener("click", showAnswer);
 nextQuestionBtn.addEventListener("click", loadNewQuestion);
 
 // =======================
-// DÉ VIRTUEL
+// DÉ VIRTUEL + NOUVELLE QUESTION
 // =======================
 rollDiceBtn.addEventListener("click", () => {
+  // Tirage du dé
   const value = Math.floor(Math.random() * 6) + 1;
   diceResult.textContent = value;
+
+  // Recharge une nouvelle question
+  loadNewQuestion();
 });
