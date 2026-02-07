@@ -250,6 +250,38 @@
   {"question":"Quel style architectural domine en France au début du XVIIIᵉ siècle ?","answer":"Le style rococo."},
   {"question":"Quel style architectural succède progressivement au rococo vers le milieu du XVIIIᵉ siècle ?","answer":"Le néoclassicisme."},
 
+{"question":"Quelle activité façonne principalement les paysages français au XVIIIᵉ siècle ?","answer":"L’agriculture."},
+  {"question":"Quel type de culture domine dans les campagnes françaises ?","answer":"Les céréales, notamment le blé."},
+  {"question":"Quelle ressource naturelle est essentielle pour le chauffage et la construction ?","answer":"Le bois."},
+  {"question":"Pourquoi les forêts françaises sont-elles protégées par l’État ?","answer":"Pour éviter la surexploitation et garantir les ressources."},
+  {"question":"Quelle ordonnance royale réglemente l’usage des forêts dès le XVIIᵉ siècle ?","answer":"L’ordonnance de Colbert sur les eaux et forêts."},
+  {"question":"Quel phénomène naturel provoque régulièrement des famines ?","answer":"Les mauvaises récoltes liées au climat."},
+  {"question":"Quelle science naturelle se développe fortement au XVIIIᵉ siècle ?","answer":"La botanique."},
+  {"question":"Quel naturaliste français classe les espèces animales et végétales ?","answer":"Georges-Louis Leclerc de Buffon."},
+  {"question":"Quel lieu est créé pour étudier et conserver les plantes à Paris ?","answer":"Le Jardin du Roi."},
+  {"question":"Quel usage agricole améliore la fertilité des sols ?","answer":"La jachère."},
+  {"question":"Quel animal est essentiel aux travaux agricoles ?","answer":"Le cheval."},
+  {"question":"Quelle technique permet de contrôler les eaux pour l’agriculture ?","answer":"L’irrigation."},
+  {"question":"Quel phénomène climatique extrême marque la fin du XVIIIᵉ siècle ?","answer":"Les hivers rigoureux, notamment celui de 1788."},
+  {"question":"Quelle activité humaine contribue à la déforestation ?","answer":"L’extension des terres agricoles."},
+  {"question":"Quel type de jardin reflète l’ordre et la maîtrise de la nature ?","answer":"Le jardin à la française."},
+  {"question":"Quel célèbre jardinier conçoit les jardins de Versailles ?","answer":"André Le Nôtre."},
+  {"question":"Quel courant intellectuel valorise l’observation de la nature ?","answer":"Les Lumières."},
+  {"question":"Quelle pratique agricole limite les risques de mauvaises récoltes ?","answer":"La diversification des cultures."},
+  {"question":"Quelle catastrophe naturelle peut détruire les récoltes en quelques heures ?","answer":"La grêle."},
+  {"question":"Quel fleuve joue un rôle majeur dans le commerce et l’agriculture ?","answer":"La Loire."},
+  {"question":"Quel animal est chassé pour le loisir de la noblesse ?","answer":"Le cerf."},
+  {"question":"Quelle ressource naturelle alimente les moulins ?","answer":"L’eau."},
+  {"question":"Quel outil permet de transformer les céréales en farine ?","answer":"Le moulin."},
+  {"question":"Quel matériau naturel est utilisé pour construire les maisons rurales ?","answer":"La pierre ou le bois, selon les régions."},
+  {"question":"Quelle activité menace les rivières et les sols ?","answer":"Les activités artisanales polluantes comme la tannerie."},
+  {"question":"Quelle plante venue des colonies est cultivée dans les jardins botaniques ?","answer":"Le café."},
+  {"question":"Quel phénomène naturel influence fortement le calendrier agricole ?","answer":"Les saisons."},
+  {"question":"Quelle institution royale encourage l’étude de la nature ?","answer":"L’Académie des sciences."},
+  {"question":"Quelle vision nouvelle de la nature apparaît au XVIIIᵉ siècle ?","answer":"La nature comme objet d’étude scientifique et de réflexion."},
+  {"question":"Quel événement social remet en question la gestion des ressources naturelles ?","answer":"La Révolution française."},
+  
+
 {"question":"Quel groupe social paie l’essentiel des impôts sous l’Ancien Régime ?","answer":"Le tiers état."},
   {"question":"Quels sont les trois ordres de la société française au XVIIIᵉ siècle ?","answer":"Le clergé, la noblesse et le tiers état."},
   {"question":"Quel impôt direct est principalement payé par les paysans ?","answer":"La taille."},
@@ -315,6 +347,7 @@
 
   
 ]
+
 
 
 
