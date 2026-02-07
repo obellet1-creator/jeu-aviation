@@ -38,15 +38,12 @@ fetch("questions.json")
 function loadNewQuestion() {
   if (questions.length === 0) return;
 
-  currentQuestion =
-    questions[Math.floor(Math.random() * questions.length)];
+  currentQuestion = questions[Math.floor(Math.random() * questions.length)];
 
-  document.getElementById("question").textContent =
-    currentQuestion.question;
+  document.getElementById("question").textContent = currentQuestion.question;
   document.getElementById("answer").textContent = "";
 
-  resetTimer();
-  startTimer();
+  // ⚠️ Plus de timer automatique
 }
 
 function showAnswer() {
@@ -67,23 +64,23 @@ function resetTimer() {
 function startTimer() {
   clearInterval(timerInterval);
 
+  timeLeft = timerDuration; // redémarre toujours à 30 s
+  updateTimerDisplay();
+
   timerInterval = setInterval(() => {
     timeLeft--;
     updateTimerDisplay();
 
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      showAnswer();
+      showAnswer(); // affichage automatique à 0
     }
   }, 1000);
 }
 
 function updateTimerDisplay() {
   timerNumber.textContent = timeLeft;
-
-  const offset =
-    circumference - (timeLeft / timerDuration) * circumference;
-
+  const offset = circumference - (timeLeft / timerDuration) * circumference;
   circle.style.strokeDashoffset = offset;
 }
 
@@ -93,14 +90,20 @@ function updateTimerDisplay() {
 function rollDice() {
   const diceValue = Math.floor(Math.random() * 6) + 1;
   document.getElementById("dice-result").textContent = diceValue;
-
-  // ⚠️ Ne déclenche PAS de nouvelle question ni de timer
-  // Le dé est uniquement pour le joueur ou les déplacements
+  // ⚠️ Ne fait rien d’autre
 }
 
 // ==========================
 // BOUTONS
 // ==========================
-document.getElementById("showAnswer").addEventListener("click", showAnswer);
-document.getElementById("nextQuestion").addEventListener("click", loadNewQuestion);
 document.getElementById("rollDice").addEventListener("click", rollDice);
+document.getElementById("nextQuestion").addEventListener("click", loadNewQuestion);
+document.getElementById("showAnswer").addEventListener("click", showAnswer);
+
+// ==========================
+// BOUTON OPTIONNEL POUR LANCER LE TIMER MANUELLEMENT
+// ==========================
+const startTimerBtn = document.getElementById("startTimer");
+if(startTimerBtn){
+  startTimerBtn.addEventListener("click", startTimer);
+}
