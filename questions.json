@@ -35,6 +35,30 @@
   {"question":"Quelle guerre oppose la France à l’Angleterre de 1756 à 1763 ?","answer":"La guerre de Sept Ans."},
   {"question":"Quelle colonie française est perdue après la guerre de Sept Ans ?","answer":"Le Canada (Nouvelle-France)."},
 
+{"question": "Quelle affaire d'empoisonnements multiples a secoué la cour de Louis XIV à la fin du XVIIe mais a eu des répercussions au XVIIIe ?", "answer": "L'affaire des Poisons"},
+  {"question": "Quel marchand protestant de Toulouse a été roué vif en 1762 pour le meurtre supposé de son fils ?", "answer": "Jean Calas"},
+  {"question": "Quel attentat contre Louis XV en 1757 a conduit à l'un des supplices les plus atroces du siècle ?", "answer": "L'attentat de Robert-François Damiens"},
+  {"question": "Quelle escroquerie impliquant un collier de diamants a terni la réputation de Marie-Antoinette en 1785 ?", "answer": "L'affaire du collier de la reine"},
+  {"question": "Quel jeune noble d'Abbeville a été exécuté en 1766 pour blasphème et impiété ?", "answer": "Le chevalier de La Barre"},
+  {"question": "Quelle affaire de possession et de séduction impliquant une jeune fille et un jésuite a fait scandale dans les années 1730 ?", "answer": "L'affaire Cadière"},
+  {"question": "Quel régicide manqué a valu à Damiens d'être écartelé vif en place de Grève ?", "answer": "L'attentat contre Louis XV"},
+  {"question": "Quelle erreur judiciaire protestante a inspiré le Traité sur la tolérance de Voltaire ?", "answer": "L'affaire Calas"},
+  {"question": "Quel cardinal a été emprisonné à la Bastille pour son rôle dans l'escroquerie du collier ?", "answer": "Le cardinal de Rohan"},
+  {"question": "Quelle favorite royale a été impliquée indirectement dans des scandales de mœurs au début du siècle ?", "answer": "La marquise de Pompadour (influence sur les affaires de cour)"},
+  {"question": "Quel supplice public a marqué l'exécution du chevalier de La Barre pour avoir chanté des chansons impies ?", "answer": "Langue et poing coupés, décapitation et bûcher"},
+  {"question": "Quelle affaire toulousaine de 1761 a vu un fils retrouvé pendu, menant à l'accusation du père protestant ?", "answer": "L'affaire Calas"},
+  {"question": "Qui a été accusée d'avoir forgé la signature de la reine dans l'affaire du collier ?", "answer": "Jeanne de Valois-Saint-Rémy (comtesse de La Motte)"},
+  {"question": "Quel aventurier italien a été impliqué dans l'affaire du collier avec Cagliostro ?", "answer": "Cagliostro (Joseph Balsamo)"},
+  {"question": "Quelle exécution pour régicide a vu le coupable tenaille, brûlé au plomb fondu et écartelé par des chevaux ?", "answer": "Robert-François Damiens"},
+  {"question": "Quelle cause célèbre a illustré l'intolérance religieuse et l'erreur judiciaire au Parlement de Toulouse ?", "answer": "L'affaire Calas"},
+  {"question": "Quel scandale de 1785 a contribué à discréditer la monarchie avant la Révolution ?", "answer": "L'affaire du collier de la reine"},
+  {"question": "Quel jeune homme a été condamné pour avoir refusé d'ôter son chapeau lors d'une procession ?", "answer": "Le chevalier de La Barre"},
+  {"question": "Quelle affaire a vu une jeune Provençale accuser un prêtre de viol et de sorcellerie dans les années 1730 ?", "answer": "L'affaire Cadière"},
+  {"question": "Quel empoisonneuse célèbre du XVIIe siècle a inspiré des craintes persistantes au XVIIIe ?", "answer": "La marquise de Brinvilliers (liée à l'affaire des Poisons)"},
+
+
+  
+
 {"question": "Quel aliment constituait la base essentielle de l'alimentation des paysans français au XVIIIᵉ siècle ?", "answer": "Le pain"},
   {"question": "Comment appelait-on la maison paysanne typique avec un toit de chaume et des murs en torchis ou en pierre ?", "answer": "La chaumière ou la maison en torchis"},
   {"question": "Quel vêtement les paysannes portaient-elles souvent par-dessus leur jupe pour se protéger du froid ?", "answer": "Le mantelet ou la cape"},
@@ -227,6 +251,7 @@
 
   
 ]
+
 
 
 
