@@ -12,64 +12,22 @@ body {
   background-color: #A63D03;
   margin: 0;
   padding: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
-/* ===== CONTENEUR PRINCIPAL ===== */
-.main {
-  width: 100%;
-  max-width: 620px;
-}
-
-/* ===== TIMER ===== */
-.timer-box {
-  background: rgba(255,255,255,0.95);
-  border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 15px;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-}
-
-#timer-container {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin: 0 auto;
-}
-
-#timer-number {
-  position: absolute;
-  inset: 0;
+/* ===== CONTENEUR DÉ (INDÉPENDANT) ===== */
+.dice-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: #c0392b;
+  margin-bottom: 20px;
 }
 
-svg circle {
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  stroke-width: 10;
-  fill: none;
-}
-
-#timer-bg { stroke: #eee; }
-#timer-circle {
-  stroke: #c0392b;
-  stroke-dasharray: 314;
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 1s linear;
-}
-
-/* ===== DÉ ===== */
-#dice-container {
-  margin-top: 15px;
+.dice-container {
+  background: rgba(255,255,255,0.95);
+  padding: 18px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  text-align: center;
 }
 
 #rollDice {
@@ -93,26 +51,73 @@ svg circle {
   color: #7a2d02;
 }
 
-/* ===== JEU ===== */
-.container {
-  background: rgba(255,255,255,0.95);
-  border-radius: 14px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+/* ===== CONTENEUR JEU ===== */
+.game-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
+.game-container {
+  background: rgba(255,255,255,0.95);
+  max-width: 620px;
+  width: 100%;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+/* ===== TITRE ===== */
 h1 {
   margin-top: 0;
   color: #7a2d02;
 }
 
+/* ===== TIMER ===== */
+#timer-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px auto;
+}
+
+#timer-number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+svg circle {
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke-width: 10;
+  fill: none;
+}
+
+#timer-bg {
+  stroke: #eee;
+}
+
+#timer-circle {
+  stroke: #c0392b;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+/* ===== QUESTION ===== */
 #question {
   font-size: 1.25rem;
   margin: 20px 0;
   min-height: 70px;
 }
 
+/* ===== BOUTONS ===== */
 .buttons {
   display: flex;
   gap: 12px;
@@ -134,6 +139,7 @@ button:hover {
   background: #1f618d;
 }
 
+/* ===== RÉPONSE ===== */
 #answer {
   margin-top: 20px;
   font-weight: bold;
@@ -146,10 +152,20 @@ button:hover {
 
 <body>
 
-<div class="main">
+<!-- 🎲 DÉ INDÉPENDANT -->
+<div class="dice-wrapper">
+  <div class="dice-container">
+    <button id="rollDice">🎲 Tirer le dé</button>
+    <div id="dice-result">–</div>
+  </div>
+</div>
 
-  <!-- TIMER INDÉPENDANT -->
-  <div class="timer-box">
+<!-- 🎮 JEU (TIMER + QUESTIONS) -->
+<div class="game-wrapper">
+  <div class="game-container">
+
+    <h1>Question</h1>
+
     <div id="timer-container">
       <svg width="120" height="120">
         <circle id="timer-bg" cx="60" cy="60" r="50"></circle>
@@ -157,17 +173,6 @@ button:hover {
       </svg>
       <div id="timer-number">30</div>
     </div>
-
-    <!-- DÉ -->
-    <div id="dice-container">
-      <button id="rollDice">🎲 Tirer le dé</button>
-      <div id="dice-result">–</div>
-    </div>
-  </div>
-
-  <!-- JEU -->
-  <div class="container">
-    <h1>Question</h1>
 
     <div id="question">Chargement de la question…</div>
 
@@ -177,8 +182,8 @@ button:hover {
     </div>
 
     <div id="answer"></div>
-  </div>
 
+  </div>
 </div>
 
 <script src="script.js"></script>
