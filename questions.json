@@ -20,8 +20,6 @@
   {"question": "Quelle taxe devait payer une famille pour avoir une cheminée ?", "answer": "Le droit de cheminée ou la cheminée fouage"},
   {"question": "Quel loisir populaire pratiquait-on dans les cabarets ?", "answer": "Jouer aux cartes, aux dés ou au billard"},
   
-  
-  
   {"question":"Qui était le roi de France au début du XVIIIᵉ siècle ?","answer":"Louis XIV, le Roi-Soleil."},
   {"question":"Quel événement marque la fin du règne de Louis XIV ?","answer":"Sa mort en 1715."},
   {"question":"Qui succède à Louis XIV sur le trône en 1715 ?","answer":"Louis XV, son arrière-petit-fils."},
@@ -36,6 +34,28 @@
   {"question":"Qui est le ministre influent de Louis XV connu pour sa politique financière ?","answer":"Le cardinal Fleury."},
   {"question":"Quelle guerre oppose la France à l’Angleterre de 1756 à 1763 ?","answer":"La guerre de Sept Ans."},
   {"question":"Quelle colonie française est perdue après la guerre de Sept Ans ?","answer":"Le Canada (Nouvelle-France)."},
+
+{"question": "Quel aliment constituait la base essentielle de l'alimentation des paysans français au XVIIIᵉ siècle ?", "answer": "Le pain"},
+  {"question": "Comment appelait-on la maison paysanne typique avec un toit de chaume et des murs en torchis ou en pierre ?", "answer": "La chaumière ou la maison en torchis"},
+  {"question": "Quel vêtement les paysannes portaient-elles souvent par-dessus leur jupe pour se protéger du froid ?", "answer": "Le mantelet ou la cape"},
+  {"question": "Quelle boisson chaude commençait à se diffuser dans les classes aisées au milieu du XVIIIᵉ siècle ?", "answer": "Le café ou le chocolat"},
+  {"question": "Quelle était la pièce principale de la maison rurale où l'on vivait, cuisinait et dormait souvent ?", "answer": "La salle commune ou la cuisine"},
+  {"question": "Quel type de pain consommaient majoritairement les plus pauvres, mélange de seigle et d'orge ?", "answer": "Le pain bis ou pain de méteil"},
+  {"question": "Comment s'appelait le lit fermé en bois typique des régions de l'Ouest comme la Bretagne ?", "answer": "Le lit-clos"},
+  {"question": "Quel accessoire masculin à la mode incluait habit, gilet et culotte chez les classes supérieures ?", "answer": "L'habit à la française"},
+  {"question": "Quel légume ou plante nouvelle comme la pomme de terre restait peu consommée par les paysans au XVIIIᵉ siècle ?", "answer": "La pomme de terre"},
+  {"question": "Quelle source de lumière utilisait-on principalement dans les foyers modestes la nuit ?", "answer": "La chandelle ou la lampe à huile"},
+  {"question": "Quel vêtement féminin ample soutenu par des paniers était porté par les bourgeoises ?", "answer": "La robe à la française"},
+  {"question": "Quel meuble servait souvent à la fois de table, de banc et de rangement dans les maisons paysannes ?", "answer": "Le coffre ou la table à tréteaux"},
+  {"question": "Quelle soupe ou bouillie accompagnait fréquemment le pain dans l'alimentation quotidienne ?", "answer": "La soupe (aux légumes, choux, oignons)"},
+  {"question": "Dans quel matériau étaient construits les toits des maisons rurales les plus courantes ?", "answer": "La chaume"},
+  {"question": "Quel tissu bon marché comme la laine ou le chanvre dominait les vêtements populaires ?", "answer": "La laine ou le chanvre"},
+  {"question": "Quel repas principal était pris vers midi et s'appelait souvent 'dîner' ?", "answer": "Le dîner"},
+  {"question": "Quelle cheminée monumentale servait à la fois de chauffage, de cuisine et d'éclairage ?", "answer": "La cheminée (avec crémaillère et marmites)"},
+  {"question": "Quel accessoire porté par les femmes pour couvrir la tête était courant dans les campagnes ?", "answer": "La coiffe"},
+  {"question": "Quel aliment carné rare était consommé surtout les jours de fête par les paysans ?", "answer": "Le lard ou le porc salé"},
+  {"question": "Quel sol était le plus fréquent dans les habitations modestes rurales ?", "answer": "La terre battue"},
+  
   {"question":"Quel jardinier conçoit les célèbres jardins de Versailles ?","answer":"André Le Nôtre."},
   {"question":"Quel traité met fin à la guerre de Succession d’Autriche ?","answer":"Le traité d’Aix-la-Chapelle en 1748."},
   {"question":"Quelle ville est la capitale culturelle et politique de la France au XVIIIᵉ siècle ?","answer":"Paris."},
@@ -182,6 +202,7 @@
 {"question":"Quel philosophe des Lumières est célèbre pour ses contes philosophiques comme Candide ?","answer":"Voltaire"},
 {"question":"Quel ministère crée Necker en 1777 pour réformer les finances ?","answer":"Il est contrôleur général des finances (mais crée notamment la Caisse d’escompte)"}
 ]
+
 
 
 
