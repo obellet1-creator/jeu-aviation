@@ -51,7 +51,7 @@ body {
   color: #7a2d02;
 }
 
-/* ===== CONTENEUR JEU ===== */
+/* ===== CONTENEUR JEU (TIMER + QUESTION) ===== */
 .game-wrapper {
   display: flex;
   justify-content: center;
@@ -78,7 +78,7 @@ h1 {
   position: relative;
   width: 120px;
   height: 120px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 15px auto;
 }
 
 #timer-number {
@@ -113,7 +113,7 @@ svg circle {
 /* ===== QUESTION ===== */
 #question {
   font-size: 1.25rem;
-  margin: 20px 0;
+  margin: 15px 0;
   min-height: 70px;
 }
 
@@ -152,7 +152,7 @@ button:hover {
 
 <body>
 
-<!-- 🎲 DÉ INDÉPENDANT -->
+<!-- 🎲 DÉ (CONTENEUR DÉDIÉ) -->
 <div class="dice-wrapper">
   <div class="dice-container">
     <button id="rollDice">🎲 Tirer le dé</button>
@@ -160,12 +160,13 @@ button:hover {
   </div>
 </div>
 
-<!-- 🎮 JEU (TIMER + QUESTIONS) -->
+<!-- 🎮 JEU : TIMER AU-DESSUS DE LA QUESTION -->
 <div class="game-wrapper">
   <div class="game-container">
 
     <h1>Question</h1>
 
+    <!-- TIMER -->
     <div id="timer-container">
       <svg width="120" height="120">
         <circle id="timer-bg" cx="60" cy="60" r="50"></circle>
@@ -174,13 +175,16 @@ button:hover {
       <div id="timer-number">30</div>
     </div>
 
+    <!-- QUESTION -->
     <div id="question">Chargement de la question…</div>
 
+    <!-- BOUTONS -->
     <div class="buttons">
       <button id="showAnswer">Afficher la réponse</button>
       <button id="nextQuestion">Nouvelle question</button>
     </div>
 
+    <!-- RÉPONSE -->
     <div id="answer"></div>
 
   </div>
