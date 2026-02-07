@@ -2,78 +2,43 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Jeu La France au 18ème siècle – Question</title>
+<title>Jeu – Questions historiques</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-/* ===== PAGE GÉNÉRALE ===== */
+/* ===== PAGE ===== */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #A63D03;
-
-  color: #1c2833;
   margin: 0;
   padding: 20px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-/* ===== CONTENEUR DU JEU ===== */
-.container {
-  background: rgba(255, 255, 255, 0.95);
-  max-width: 600px;
+/* ===== CONTENEUR PRINCIPAL ===== */
+.main {
   width: 100%;
-  padding: 24px;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  text-align: center;
-}
-
-/* ===== TITRE ===== */
-h1 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #7a2d02;
-}
-
-/* ===== DÉ VIRTUEL ===== */
-#dice-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-#dice-container button {
-  padding: 10px 16px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #7a2d02;
-  color: white;
-}
-
-#dice-container button:hover {
-  background: #5c2101;
-}
-
-#dice-result {
-  margin-top: 8px;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #7a2d02;
+  max-width: 620px;
 }
 
 /* ===== TIMER ===== */
+.timer-box {
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
 #timer-container {
   position: relative;
   width: 120px;
   height: 120px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto;
 }
 
 #timer-number {
@@ -94,10 +59,7 @@ svg circle {
   fill: none;
 }
 
-#timer-bg {
-  stroke: #eee;
-}
-
+#timer-bg { stroke: #eee; }
 #timer-circle {
   stroke: #c0392b;
   stroke-dasharray: 314;
@@ -105,14 +67,52 @@ svg circle {
   transition: stroke-dashoffset 1s linear;
 }
 
-/* ===== QUESTION ===== */
+/* ===== DÉ ===== */
+#dice-container {
+  margin-top: 15px;
+}
+
+#rollDice {
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #7a2d02;
+  color: white;
+}
+
+#rollDice:hover {
+  background: #5c2101;
+}
+
+#dice-result {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #7a2d02;
+}
+
+/* ===== JEU ===== */
+.container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-top: 0;
+  color: #7a2d02;
+}
+
 #question {
   font-size: 1.25rem;
   margin: 20px 0;
   min-height: 70px;
 }
 
-/* ===== BOUTONS ===== */
 .buttons {
   display: flex;
   gap: 12px;
@@ -134,7 +134,6 @@ button:hover {
   background: #1f618d;
 }
 
-/* ===== RÉPONSE ===== */
 #answer {
   margin-top: 20px;
   font-weight: bold;
@@ -147,36 +146,39 @@ button:hover {
 
 <body>
 
-<div class="container">
+<div class="main">
 
-  <!-- Dé virtuel -->
-  <div id="dice-container">
-    <button id="rollDice">🎲 Tirer le dé</button>
-    <div id="dice-result">–</div>
+  <!-- TIMER INDÉPENDANT -->
+  <div class="timer-box">
+    <div id="timer-container">
+      <svg width="120" height="120">
+        <circle id="timer-bg" cx="60" cy="60" r="50"></circle>
+        <circle id="timer-circle" cx="60" cy="60" r="50"></circle>
+      </svg>
+      <div id="timer-number">30</div>
+    </div>
+
+    <!-- DÉ -->
+    <div id="dice-container">
+      <button id="rollDice">🎲 Tirer le dé</button>
+      <div id="dice-result">–</div>
+    </div>
   </div>
 
-  <h1>La France au 18ème siècle</h1>
+  <!-- JEU -->
+  <div class="container">
+    <h1>Question</h1>
 
-  <!-- TIMER -->
-  <div id="timer-container">
-    <svg width="120" height="120">
-      <circle id="timer-bg" cx="60" cy="60" r="50"></circle>
-      <circle id="timer-circle" cx="60" cy="60" r="50"></circle>
-    </svg>
-    <div id="timer-number">30</div>
+    <div id="question">Chargement de la question…</div>
+
+    <div class="buttons">
+      <button id="showAnswer">Afficher la réponse</button>
+      <button id="nextQuestion">Nouvelle question</button>
+    </div>
+
+    <div id="answer"></div>
   </div>
 
-  <!-- QUESTION -->
-  <div id="question">Chargement de la question…</div>
-
-  <!-- BOUTONS -->
-  <div class="buttons">
-    <button id="showAnswer">Afficher la réponse</button>
-    <button id="nextQuestion">Nouvelle question</button>
-  </div>
-
-  <!-- RÉPONSE -->
-  <div id="answer"></div>
 </div>
 
 <script src="script.js"></script>
