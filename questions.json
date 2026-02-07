@@ -56,7 +56,35 @@
   {"question": "Quelle affaire a vu une jeune Provençale accuser un prêtre de viol et de sorcellerie dans les années 1730 ?", "answer": "L'affaire Cadière"},
   {"question": "Quel empoisonneuse célèbre du XVIIe siècle a inspiré des craintes persistantes au XVIIIe ?", "answer": "La marquise de Brinvilliers (liée à l'affaire des Poisons)"},
 
-
+{"question":"Quel tribunal royal juge les crimes graves sous l’Ancien Régime ?","answer":"Le parlement."},
+  {"question":"Quelle peine était fréquemment appliquée pour le vol à l’époque ?","answer":"La mutilation ou la prison."},
+  {"question":"Quel système judiciaire distingue les nobles des roturiers ?","answer":"La noblesse bénéficie de tribunaux particuliers et de privilèges."},
+  {"question":"Quel tribunal local juge les affaires de village ou de ville ?","answer":"Le bailliage ou la sénéchaussée."},
+  {"question":"Quelle était la peine capitale la plus fréquente pour les crimes graves ?","answer":"La décapitation ou la pendaison."},
+  {"question":"Quel tribunal religieux pouvait juger les crimes liés à la foi ?","answer":"Le tribunal de l’Inquisition."},
+  {"question":"Quel corps applique les décisions de justice ?","answer":"La maréchaussée ou les prévôts."},
+  {"question":"Quel crime était sévèrement puni pour protéger la propriété des nobles ?","answer":"Le vol et le brigandage."},
+  {"question":"Quel groupe social était souvent accusé de sorcellerie ?","answer":"Les paysans et les femmes."},
+  {"question":"Quel outil juridique permettait de saisir les biens d’un accusé ?","answer":"L’ordonnance ou le saisissement des biens."},
+  {"question":"Quel système permet à un accusé de faire appel d’une décision ?","answer":"L’appel devant le parlement."},
+  {"question":"Quelle institution royale veille à l’application des lois ?","answer":"Le roi et ses intendants."},
+  {"question":"Quel supplice consistait à arracher les ongles ou membres d’un condamné ?","answer":"La torture judiciaire."},
+  {"question":"Quel crime était considéré comme un crime de lèse-majesté ?","answer":"Toute offense au roi ou à l’État."},
+  {"question":"Quel type de prison servait à détenir temporairement les accusés ?","answer":"La prison d’office ou le donjon."},
+  {"question":"Quel est le rôle des intendants dans les provinces ?","answer":"Administrer la justice et appliquer les lois du roi."},
+  {"question":"Quel texte codifie certaines lois pénales au XVIIIᵉ siècle ?","answer":"Les ordonnances royales, comme l’ordonnance criminelle de 1670."},
+  {"question":"Quelle institution pouvait censurer les écrits et punir les auteurs ?","answer":"La censure royale ou l’officialité de l’Église."},
+  {"question":"Quel crime était puni par la roue ou le supplice de l’écartèlement ?","answer":"Les crimes de grande trahison ou meurtre grave."},
+  {"question":"Quel tribunal s’occupait des affaires civiles et des conflits de propriété ?","answer":"Le tribunal civil du bailliage ou sénéchaussée."},
+  {"question":"Quelle classe sociale avait un accès limité à la justice ?","answer":"Le tiers état, surtout les paysans pauvres."},
+  {"question":"Quel procès célèbre du XVIIIᵉ siècle implique une accusation de crime politique ou de trahison ?","answer":"L’affaire Calas."},
+  {"question":"Quelle sanction pouvait être appliquée pour contester l’autorité du roi ?","answer":"La mort ou l’exil."},
+  {"question":"Quel rôle avait le prévôt des marchands dans les villes ?","answer":"Surveiller l’ordre public et appliquer certaines lois urbaines."},
+  {"question":"Quel type de châtiment public servait à dissuader la population ?","answer":"Les exécutions publiques et la mise en pillory."},
+  {"question":"Quelle différence existe entre la justice seigneuriale et royale ?","answer":"La seigneuriale juge les petits délits localement, la royale les crimes graves."},
+  {"question":"Quel code religieux influençait le droit familial et matrimonial ?","answer":"Le droit canon de l’Église."},
+  {"question":"Quel recours permettait aux opprimés de dénoncer un abus de justice ?","answer":"La requête au roi."},
+  {"question":"Quel grand événement met fin à l’Ancien Régime judiciaire ?","answer":"La Révolution française en 1789."},
   
 
 {"question": "Quel aliment constituait la base essentielle de l'alimentation des paysans français au XVIIIᵉ siècle ?", "answer": "Le pain"},
@@ -347,6 +375,7 @@
 
   
 ]
+
 
 
 
