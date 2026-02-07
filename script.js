@@ -14,6 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
   const circumference = 2 * Math.PI * 50;
 
   // ==========================
+  // SON DU TIMER
+  // ==========================
+  const tickSound = new Audio('sounds/tick.mp3'); // place ton fichier tick.mp3 dans /sounds/
+
+  // ==========================
   // INITIALISATION TIMER
   // ==========================
   circle.style.strokeDasharray = circumference;
@@ -73,6 +78,10 @@ document.addEventListener("DOMContentLoaded", function() {
     timerInterval = setInterval(() => {
       timeLeft--;
       updateTimerDisplay();
+
+      // Jouer le son à chaque seconde
+      tickSound.currentTime = 0;
+      tickSound.play().catch(() => { /* ignore l'erreur si autoplay bloqué */ });
 
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
