@@ -249,6 +249,39 @@
 
   {"question":"Quel style architectural domine en France au début du XVIIIᵉ siècle ?","answer":"Le style rococo."},
   {"question":"Quel style architectural succède progressivement au rococo vers le milieu du XVIIIᵉ siècle ?","answer":"Le néoclassicisme."},
+
+{"question":"Quel groupe social paie l’essentiel des impôts sous l’Ancien Régime ?","answer":"Le tiers état."},
+  {"question":"Quels sont les trois ordres de la société française au XVIIIᵉ siècle ?","answer":"Le clergé, la noblesse et le tiers état."},
+  {"question":"Quel impôt direct est principalement payé par les paysans ?","answer":"La taille."},
+  {"question":"Quel impôt obligatoire concerne l’entretien des routes ?","answer":"La corvée royale."},
+  {"question":"Quel impôt indirect porte sur le sel ?","answer":"La gabelle."},
+  {"question":"Quelle activité économique emploie la majorité de la population française ?","answer":"L’agriculture."},
+  {"question":"Quel type de commerce enrichit fortement les ports français au XVIIIᵉ siècle ?","answer":"Le commerce colonial."},
+  {"question":"Quel commerce triangulaire relie l’Europe, l’Afrique et les Antilles ?","answer":"Le commerce des esclaves, des matières premières et des produits manufacturés."},
+  {"question":"Quel port français devient un centre majeur du commerce colonial ?","answer":"Bordeaux."},
+  {"question":"Quelle ville est un grand port commercial sur la Méditerranée ?","answer":"Marseille."},
+  {"question":"Quelle culture coloniale est à la base de la richesse des Antilles françaises ?","answer":"La culture de la canne à sucre."},
+  {"question":"Quel texte réglemente l’esclavage dans les colonies françaises ?","answer":"Le Code noir."},
+  {"question":"Quelle classe sociale regroupe artisans, commerçants et bourgeois ?","answer":"Le tiers état urbain."},
+  {"question":"Quel groupe social bénéficie de privilèges fiscaux ?","answer":"La noblesse et le clergé."},
+  {"question":"Quel est le rôle des corporations dans les villes ?","answer":"Elles réglementent les métiers et la production."},
+  {"question":"Quel phénomène économique provoque des famines au XVIIIᵉ siècle ?","answer":"Les mauvaises récoltes et la hausse du prix du grain."},
+  {"question":"Quelle boisson devient populaire dans les villes au XVIIIᵉ siècle ?","answer":"Le café."},
+  {"question":"Quel lieu urbain favorise les échanges intellectuels et sociaux ?","answer":"Les salons."},
+  {"question":"Quel groupe social dirige les salons et participe aux Lumières ?","answer":"La bourgeoisie cultivée."},
+  {"question":"Quel métier financier prend de l’importance au XVIIIᵉ siècle ?","answer":"Banquier."},
+  {"question":"Quel système économique repose sur l’intervention de l’État ?","answer":"Le mercantilisme."},
+  {"question":"Quel ministre de Louis XVI tente de réformer l’économie et les impôts ?","answer":"Turgot."},
+  {"question":"Quelle activité textile se développe dans les campagnes ?","answer":"La proto-industrie."},
+  {"question":"Quel produit alimentaire de base est au cœur des tensions sociales ?","answer":"Le pain."},
+  {"question":"Quelle crise aggrave la pauvreté à la fin du XVIIIᵉ siècle ?","answer":"La crise financière de l’État."},
+  {"question":"Quel groupe social s’enrichit grâce au commerce et à l’industrie ?","answer":"La bourgeoisie."},
+  {"question":"Quelle institution contrôle les prix et la circulation des grains ?","answer":"L’État royal."},
+  {"question":"Quel impôt est payé par tous mais très inégalement réparti ?","answer":"Les impôts royaux."},
+  {"question":"Quel phénomène social remet en cause les privilèges à la fin du siècle ?","answer":"La montée des idées des Lumières."},
+  {"question":"Quel événement de 1789 marque la fin de l’ordre social de l’Ancien Régime ?","answer":"La Révolution française."},
+
+  
   {"question":"Quel roi favorise le développement de l’architecture néoclassique ?","answer":"Louis XVI."},
   {"question":"Quel monument parisien est un exemple majeur du néoclassicisme ?","answer":"Le Panthéon de Paris."},
   {"question":"Quel architecte conçoit le Panthéon de Paris ?","answer":"Jacques-Germain Soufflot."},
@@ -282,6 +315,7 @@
 
   
 ]
+
 
 
 
