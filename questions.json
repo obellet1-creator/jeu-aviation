@@ -245,12 +245,44 @@
   {"question": "Quel philosophe et mathématicien a écrit sur le progrès humain avant la Révolution ?", "answer": "Condorcet"},
   {"question": "Qui a été régent de France de 1715 à 1723 après la mort de Louis XIV ?", "answer": "Philippe d'Orléans"},
   {"question": "Quel écrivain a publié Manon Lescaut au début du siècle ?", "answer": "Abbé Prévost"},
-  {"question": "Quelle salonnière et intellectuelle a influencé les Lumières et correspondu avec Voltaire ?", "answer": "Émilie du Châtelet"}
+  {"question": "Quelle salonnière et intellectuelle a influencé les Lumières et correspondu avec Voltaire ?", "answer": "Émilie du Châtelet"},
+
+  {"question":"Quel style architectural domine en France au début du XVIIIᵉ siècle ?","answer":"Le style rococo."},
+  {"question":"Quel style architectural succède progressivement au rococo vers le milieu du XVIIIᵉ siècle ?","answer":"Le néoclassicisme."},
+  {"question":"Quel roi favorise le développement de l’architecture néoclassique ?","answer":"Louis XVI."},
+  {"question":"Quel monument parisien est un exemple majeur du néoclassicisme ?","answer":"Le Panthéon de Paris."},
+  {"question":"Quel architecte conçoit le Panthéon de Paris ?","answer":"Jacques-Germain Soufflot."},
+  {"question":"Quelle caractéristique définit l’architecture néoclassique ?","answer":"L’inspiration de l’Antiquité grecque et romaine."},
+  {"question":"Quel élément architectural antique est largement réutilisé au XVIIIᵉ siècle ?","answer":"Les colonnes."},
+  {"question":"Quel palais royal est transformé et embelli au XVIIIᵉ siècle ?","answer":"Le château de Versailles."},
+  {"question":"Quel architecte est célèbre pour ses réalisations à Versailles sous Louis XV ?","answer":"Ange-Jacques Gabriel."},
+  {"question":"Quel bâtiment parisien est conçu à l’origine comme une église dédiée à Sainte-Geneviève ?","answer":"Le Panthéon."},
+  {"question":"Quel type de bâtiment public se développe fortement au XVIIIᵉ siècle ?","answer":"Les places monumentales."},
+  {"question":"Quelle place parisienne est un exemple d’urbanisme du XVIIIᵉ siècle ?","answer":"La place de la Concorde (ancienne place Louis XV)."},
+  {"question":"Quel architecte conçoit la place Louis XV à Paris ?","answer":"Ange-Jacques Gabriel."},
+  {"question":"Quelle fonction ont les hôtels particuliers dans les villes françaises ?","answer":"Des résidences urbaines pour l’aristocratie."},
+  {"question":"Quel quartier parisien est connu pour ses hôtels particuliers du XVIIIᵉ siècle ?","answer":"Le quartier du Marais."},
+  {"question":"Quel architecte est associé à une architecture visionnaire à la fin du XVIIIᵉ siècle ?","answer":"Claude-Nicolas Ledoux."},
+  {"question":"Quel autre architecte visionnaire conçoit des formes géométriques audacieuses ?","answer":"Étienne-Louis Boullée."},
+  {"question":"Quel bâtiment de Ledoux est lié à la collecte du sel ?","answer":"La Saline royale d’Arc-et-Senans."},
+  {"question":"Quel principe architectural prône la clarté et la symétrie ?","answer":"La rationalité."},
+  {"question":"Quel matériau est largement utilisé dans l’architecture monumentale ?","answer":"La pierre."},
+  {"question":"Quel rôle joue l’Académie royale d’architecture ?","answer":"Former et encadrer les architectes."},
+  {"question":"Quel bâtiment parisien sert de résidence à la Monnaie royale ?","answer":"L’Hôtel de la Monnaie."},
+  {"question":"Quel architecte conçoit l’Hôtel de la Monnaie ?","answer":"Jacques-Denis Antoine."},
+  {"question":"Quelle influence intellectuelle marque l’architecture du XVIIIᵉ siècle ?","answer":"Les idées des Lumières."},
+  {"question":"Quel type d’architecture vise à améliorer la vie urbaine ?","answer":"L’urbanisme."},
+  {"question":"Quel élément décoratif du rococo est souvent abandonné au profit de la sobriété ?","answer":"Les ornements excessifs."},
+  {"question":"Quel édifice religieux illustre la transition vers le néoclassicisme ?","answer":"L’église Saint-Philippe-du-Roule."},
+  {"question":"Quelle ville française est profondément remaniée au XVIIIᵉ siècle selon des principes modernes ?","answer":"Bordeaux."},
+  {"question":"Quel architecte participe à l’aménagement du Bordeaux du XVIIIᵉ siècle ?","answer":"Jacques Gabriel."},
+  {"question":"Quel objectif principal guide l’architecture française à la fin du XVIIIᵉ siècle ?","answer":"Allier beauté, raison et utilité."}
 
 
 
   
 ]
+
 
 
 
