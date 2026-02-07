@@ -1,4 +1,27 @@
 [
+  {"question": "Comment s'appelait le pain le plus courant consommé par le peuple ?", "answer": "Le pain bis ou pain de méteil"},
+  {"question": "Quel était le principal aliment de base des Français du XVIIIᵉ siècle ?", "answer": "Le pain"},
+  {"question": "Dans quoi les paysans cuisinaient-ils souvent leurs repas ?", "answer": "Une marmite suspendue dans la cheminée"},
+  {"question": "Comment s'appelait le lit fermé typique des campagnes bretonnes ?", "answer": "Le lit-clos"},
+  {"question": "Quelle était la principale source d'éclairage dans les foyers modestes ?", "answer": "La chandelle ou la lampe à huile"},
+  {"question": "Quel vêtement les femmes portaient-elles par-dessus leur robe pour sortir ?", "answer": "La coiffe et souvent un mantlet ou une cape"},
+  {"question": "Comment appelait-on les marchés hebdomadaires dans les villages ?", "answer": "Le marché ou la foire"},
+  {"question": "Quel était le jour de lessive traditionnel pour les ménagères ?", "answer": "Le lundi"},
+  {"question": "Quelle boisson chaude commençait à se répandre dans les classes aisées ?", "answer": "Le café ou le chocolat"},
+  {"question": "Comment s'appelait le principal repas de la journée pris vers midi ?", "answer": "Le dîner"},
+  {"question": "Quel petit repas prenait-on le soir dans les campagnes ?", "answer": "La soupe ou le souper"},
+  {"question": "Quelle maladie fréquente touchait les enfants à cause de la malnutrition ?", "answer": "Le scorbut ou le rachitisme"},
+  {"question": "Dans quel type d'habitation vivaient la plupart des paysans ?", "answer": "Une maison en torchis ou en pierre avec toit de chaume"},
+  {"question": "Quel animal était essentiel pour labourer les champs ?", "answer": "Le cheval ou le bœuf"},
+  {"question": "Comment appelait-on les colporteurs qui vendaient des merceries dans les villages ?", "answer": "Les merciers ambulants ou colporteurs"},
+  {"question": "Quelle fête religieuse rythmait fortement le calendrier paysan ?", "answer": "La Saint-Jean (24 juin) ou les Rogations"},
+  {"question": "Quel instrument jouaient souvent les ménétriers pour les danses villageoises ?", "answer": "La vielle à roue ou le violon"},
+  {"question": "Comment s'appelait la pièce principale où l'on vivait et cuisinait ?", "answer": "La salle commune ou la cuisine"},
+  {"question": "Quelle taxe devait payer une famille pour avoir une cheminée ?", "answer": "Le droit de cheminée ou la cheminée fouage"},
+  {"question": "Quel loisir populaire pratiquait-on dans les cabarets ?", "answer": "Jouer aux cartes, aux dés ou au billard"},
+  
+  
+  
   {"question":"Qui était le roi de France au début du XVIIIᵉ siècle ?","answer":"Louis XIV, le Roi-Soleil."},
   {"question":"Quel événement marque la fin du règne de Louis XIV ?","answer":"Sa mort en 1715."},
   {"question":"Qui succède à Louis XIV sur le trône en 1715 ?","answer":"Louis XV, son arrière-petit-fils."},
@@ -159,6 +182,7 @@
 {"question":"Quel philosophe des Lumières est célèbre pour ses contes philosophiques comme Candide ?","answer":"Voltaire"},
 {"question":"Quel ministère crée Necker en 1777 pour réformer les finances ?","answer":"Il est contrôleur général des finances (mais crée notamment la Caisse d’escompte)"}
 ]
+
 
 
 
