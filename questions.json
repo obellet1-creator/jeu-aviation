@@ -200,8 +200,34 @@
 {"question":"Quel événement symbolique se produit le 14 juillet 1789 ?","answer":"La prise de la Bastille"},
 {"question":"Quelle assemblée vote l’abolition des privilèges dans la nuit du 4 août 1789 ?","answer":"L’Assemblée constituante"},
 {"question":"Quel philosophe des Lumières est célèbre pour ses contes philosophiques comme Candide ?","answer":"Voltaire"},
-{"question":"Quel ministère crée Necker en 1777 pour réformer les finances ?","answer":"Il est contrôleur général des finances (mais crée notamment la Caisse d’escompte)"}
+{"question":"Quel ministère crée Necker en 1777 pour réformer les finances ?","answer":"Il est contrôleur général des finances (mais crée notamment la Caisse d’escompte)"},
+
+{"question": "Quel philosophe des Lumières a écrit Candide et défendu la tolérance ?", "answer": "Voltaire"},
+  {"question": "Qui est l'auteur de L'Esprit des lois et théoricien de la séparation des pouvoirs ?", "answer": "Montesquieu"},
+  {"question": "Quel encyclopédiste a dirigé avec d'Alembert L'Encyclopédie ?", "answer": "Denis Diderot"},
+  {"question": "Quel philosophe genevois mais actif en France a écrit Du contrat social ?", "answer": "Jean-Jacques Rousseau"},
+  {"question": "Qui était le roi de France de 1715 à 1774 ?", "answer": "Louis XV"},
+  {"question": "Quel roi a régné de 1774 à 1792 et a été guillotiné pendant la Révolution ?", "answer": "Louis XVI"},
+  {"question": "Quelle favorite de Louis XV a exercé une grande influence politique ?", "answer": "La marquise de Pompadour"},
+  {"question": "Quel contrôleur général des finances a tenté des réformes sous Louis XVI avant la Révolution ?", "answer": "Jacques Necker"},
+  {"question": "Qui a écrit Le Mariage de Figaro et Le Barbier de Séville ?", "answer": "Pierre-Augustin Caron de Beaumarchais"},
+  {"question": "Quel philosophe mathématicien a co-dirigé L'Encyclopédie avec Diderot ?", "answer": "Jean le Rond d'Alembert"},
+  {"question": "Quelle femme de lettres a défendu les droits des femmes dans la Déclaration des droits de la femme et de la citoyenne ?", "answer": "Olympe de Gouges"},
+  {"question": "Quel ministre des finances sous Louis XVI a proposé une réforme fiscale en 1787 ?", "answer": "Calonne"},
+  {"question": "Qui a tenté des réformes libérales comme contrôleur général en 1774-1776 ?", "answer": "Turgot"},
+  {"question": "Quel orateur et député a joué un rôle majeur au début de la Révolution française ?", "answer": "Mirabeau"},
+  {"question": "Quel leader révolutionnaire jacobins a été exécuté en 1794 ?", "answer": "Maximilien Robespierre"},
+  {"question": "Quelle reine consort d'Autriche a été guillotinée en 1793 ?", "answer": "Marie-Antoinette"},
+  {"question": "Quel philosophe et mathématicien a écrit sur le progrès humain avant la Révolution ?", "answer": "Condorcet"},
+  {"question": "Qui a été régent de France de 1715 à 1723 après la mort de Louis XIV ?", "answer": "Philippe d'Orléans"},
+  {"question": "Quel écrivain a publié Manon Lescaut au début du siècle ?", "answer": "Abbé Prévost"},
+  {"question": "Quelle salonnière et intellectuelle a influencé les Lumières et correspondu avec Voltaire ?", "answer": "Émilie du Châtelet"}
+
+
+
+  
 ]
+
 
 
 
