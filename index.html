@@ -13,25 +13,21 @@ body {
   margin: 0;
   padding: 20px;
   min-height: 100vh;
+}
+
+/* ===== CONTENEUR DÉ (INDÉPENDANT) ===== */
+.dice-wrapper {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
-/* ===== CONTENEUR PRINCIPAL ===== */
-.main-wrapper {
-  width: 100%;
-  max-width: 620px;
-}
-
-/* ===== CONTENEUR DÉ ===== */
 .dice-container {
   background: rgba(255,255,255,0.95);
-  padding: 18px 0;
+  padding: 18px 30px;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.35);
   text-align: center;
-  margin-bottom: 20px;
-  width: 100%; /* largeur identique au conteneur de questions */
 }
 
 #rollDice {
@@ -55,9 +51,15 @@ body {
   color: #7a2d02;
 }
 
-/* ===== CONTENEUR JEU ===== */
+/* ===== CONTENEUR JEU (TIMER + QUESTION) ===== */
+.game-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .game-container {
   background: rgba(255,255,255,0.95);
+  max-width: 620px;
   width: 100%;
   padding: 26px;
   border-radius: 16px;
@@ -97,7 +99,10 @@ svg circle {
   fill: none;
 }
 
-#timer-bg { stroke: #eee; }
+#timer-bg {
+  stroke: #eee;
+}
+
 #timer-circle {
   stroke: #c0392b;
   stroke-dasharray: 314;
@@ -147,15 +152,16 @@ button:hover {
 
 <body>
 
-<div class="main-wrapper">
-
-  <!-- 🎲 DÉ -->
+<!-- 🎲 DÉ (CONTENEUR DÉDIÉ) -->
+<div class="dice-wrapper">
   <div class="dice-container">
     <button id="rollDice">🎲 Tirer le dé</button>
     <div id="dice-result">–</div>
   </div>
+</div>
 
-  <!-- 🎮 JEU -->
+<!-- 🎮 JEU : TIMER AU-DESSUS DE LA QUESTION -->
+<div class="game-wrapper">
   <div class="game-container">
 
     <h1>Question</h1>
@@ -182,7 +188,6 @@ button:hover {
     <div id="answer"></div>
 
   </div>
-
 </div>
 
 <script src="script.js"></script>
