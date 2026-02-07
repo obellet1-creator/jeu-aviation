@@ -88,27 +88,19 @@ function updateTimerDisplay() {
 }
 
 // ==========================
-// DÉ VIRTUEL
+// DÉ VIRTUEL (COMPLÈTEMENT INDÉPENDANT)
 // ==========================
 function rollDice() {
   const diceValue = Math.floor(Math.random() * 6) + 1;
   document.getElementById("dice-result").textContent = diceValue;
 
-  // Tirer le dé = nouvelle question + nouveau timer
-  loadNewQuestion();
+  // ⚠️ Ne déclenche PAS de nouvelle question ni de timer
+  // Le dé est uniquement pour le joueur ou les déplacements
 }
 
 // ==========================
 // BOUTONS
 // ==========================
-document
-  .getElementById("showAnswer")
-  .addEventListener("click", showAnswer);
-
-document
-  .getElementById("nextQuestion")
-  .addEventListener("click", loadNewQuestion);
-
-document
-  .getElementById("rollDice")
-  .addEventListener("click", rollDice);
+document.getElementById("showAnswer").addEventListener("click", showAnswer);
+document.getElementById("nextQuestion").addEventListener("click", loadNewQuestion);
+document.getElementById("rollDice").addEventListener("click", rollDice);
