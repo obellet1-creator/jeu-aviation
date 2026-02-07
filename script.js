@@ -1,34 +1,25 @@
-// =======================
+// ==========================
 // VARIABLES GLOBALES
-// =======================
+// ==========================
 let questions = [];
 let currentQuestion = null;
 
-let timeLeft = 30;
+let timerDuration = 30;
+let timeLeft = timerDuration;
 let timerInterval = null;
 
-const TOTAL_TIME = 30;
-const CIRCLE_LENGTH = 314; // 2 * PI * 50
-
-// =======================
-// ÉLÉMENTS DOM
-// =======================
-const questionDiv = document.getElementById("question");
-const answerDiv = document.getElementById("answer");
-
-const showAnswerBtn = document.getElementById("showAnswer");
-const nextQuestionBtn = document.getElementById("nextQuestion");
-
+const circle = document.getElementById("timer-circle");
 const timerNumber = document.getElementById("timer-number");
-const timerCircle = document.getElementById("timer-circle");
+const circumference = 2 * Math.PI * 50;
 
-// Dé virtuel
-const rollDiceBtn = document.getElementById("rollDice");
-const diceResult = document.getElementById("dice-result");
+// ==========================
+// INITIALISATION TIMER
+// ==========================
+circle.style.strokeDasharray = circumference;
 
-// =======================
+// ==========================
 // CHARGEMENT DES QUESTIONS
-// =======================
+// ==========================
 fetch("questions.json")
   .then(response => response.json())
   .then(data => {
@@ -36,41 +27,45 @@ fetch("questions.json")
     loadNewQuestion();
   })
   .catch(error => {
-    questionDiv.textContent = "Erreur de chargement des questions.";
+    document.getElementById("question").textContent =
+      "Erreur de chargement des questions";
     console.error(error);
   });
 
-// =======================
-// FONCTIONS PRINCIPALES
-// =======================
+// ==========================
+// FONCTIONS QUESTIONS
+// ==========================
 function loadNewQuestion() {
-  if (questions.length === 0) {
-    questionDiv.textContent = "Aucune question disponible.";
-    return;
-  }
+  if (questions.length === 0) return;
+
+  currentQuestion =
+    questions[Math.floor(Math.random() * questions.length)];
+
+  document.getElementById("question").textContent =
+    currentQuestion.question;
+  document.getElementById("answer").textContent = "";
 
   resetTimer();
-
-  currentQuestion = questions[Math.floor(Math.random() * questions.length)];
-
-  questionDiv.textContent = currentQuestion.question;
-  answerDiv.textContent = "";
-
   startTimer();
 }
 
 function showAnswer() {
-  if (currentQuestion) {
-    answerDiv.textContent = currentQuestion.answer;
-  }
+  if (!currentQuestion) return;
+  document.getElementById("answer").textContent =
+    "Réponse : " + currentQuestion.answer;
 }
 
-// =======================
-// TIMER
-// =======================
-function startTimer() {
-  timeLeft = TOTAL_TIME;
+// ==========================
+// TIMER (INDÉPENDANT)
+// ==========================
+function resetTimer() {
+  clearInterval(timerInterval);
+  timeLeft = timerDuration;
   updateTimerDisplay();
+}
+
+function startTimer() {
+  clearInterval(timerInterval);
 
   timerInterval = setInterval(() => {
     timeLeft--;
@@ -83,36 +78,37 @@ function startTimer() {
   }, 1000);
 }
 
-function resetTimer() {
-  if (timerInterval) {
-    clearInterval(timerInterval);
-  }
-  timeLeft = TOTAL_TIME;
-  updateTimerDisplay();
-}
-
 function updateTimerDisplay() {
   timerNumber.textContent = timeLeft;
 
-  const progress = timeLeft / TOTAL_TIME;
-  const offset = CIRCLE_LENGTH * (1 - progress);
-  timerCircle.style.strokeDashoffset = offset;
+  const offset =
+    circumference - (timeLeft / timerDuration) * circumference;
+
+  circle.style.strokeDashoffset = offset;
 }
 
-// =======================
-// ÉVÉNEMENTS
-// =======================
-showAnswerBtn.addEventListener("click", showAnswer);
-nextQuestionBtn.addEventListener("click", loadNewQuestion);
+// ==========================
+// DÉ VIRTUEL
+// ==========================
+function rollDice() {
+  const diceValue = Math.floor(Math.random() * 6) + 1;
+  document.getElementById("dice-result").textContent = diceValue;
 
-// =======================
-// DÉ VIRTUEL + NOUVELLE QUESTION
-// =======================
-rollDiceBtn.addEventListener("click", () => {
-  // Tirage du dé
-  const value = Math.floor(Math.random() * 6) + 1;
-  diceResult.textContent = value;
-
-  // Recharge une nouvelle question
+  // Tirer le dé = nouvelle question + nouveau timer
   loadNewQuestion();
-});
+}
+
+// ==========================
+// BOUTONS
+// ==========================
+document
+  .getElementById("showAnswer")
+  .addEventListener("click", showAnswer);
+
+document
+  .getElementById("nextQuestion")
+  .addEventListener("click", loadNewQuestion);
+
+document
+  .getElementById("rollDice")
+  .addEventListener("click", rollDice);
