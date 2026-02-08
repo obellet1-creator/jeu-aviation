@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
+
   // ==========================
   // VARIABLES GLOBALES
   // ==========================
   let questions = [];
   let currentQuestion = null;
 
-  let timerDuration = 30;
+  const timerDuration = 30;
   let timeLeft = timerDuration;
   let timerInterval = null;
 
@@ -13,10 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerNumber = document.getElementById("timer-number");
   const circumference = 2 * Math.PI * 50;
 
-  // ==========================
-  // SON DU TIMER
-  // ==========================
-  const tickSound = new Audio('sounds/tick.mp3'); // place ton fichier tick.mp3 dans /sounds/
+  // 🔊 Sons
+  const tickSound = new Audio("sounds/tick.mp3");
+  tickSound.volume = 0.3;
 
   // ==========================
   // INITIALISATION TIMER
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(response => response.json())
     .then(data => {
       questions = data;
-      loadNewQuestion(false); // Charge première question mais ne démarre pas le timer
+      loadNewQuestion(false); // première question sans démarrer le timer
     })
     .catch(error => {
       document.getElementById("question").textContent =
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
   // ==========================
-  // FONCTIONS QUESTIONS
+  // QUESTIONS
   // ==========================
   function loadNewQuestion(startTimerFlag = true) {
     if (questions.length === 0) return;
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // ==========================
-  // TIMER
+  // TIMER AVEC ACCÉLÉRATION
   // ==========================
   function resetTimer() {
     clearInterval(timerInterval);
@@ -79,9 +79,16 @@ document.addEventListener("DOMContentLoaded", function() {
       timeLeft--;
       updateTimerDisplay();
 
-      // Jouer le son à chaque seconde
-      tickSound.currentTime = 0;
-      tickSound.play().catch(() => { /* ignore l'erreur si autoplay bloqué */ });
+      // 🔊 Tick normal
+      if (timeLeft > 10) {
+        playTick();
+      }
+
+      // 🔥 Accélération dans les 10 dernières secondes
+      if (timeLeft <= 10 && timeLeft > 0) {
+        playTick();
+        setTimeout(playTick, 300); // second tick rapide
+      }
 
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
@@ -92,12 +99,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function updateTimerDisplay() {
     timerNumber.textContent = timeLeft;
-    const offset = circumference - (timeLeft / timerDuration) * circumference;
+    const offset =
+      circumference - (timeLeft / timerDuration) * circumference;
     circle.style.strokeDashoffset = offset;
   }
 
+  function playTick() {
+    tickSound.currentTime = 0;
+    tickSound.play();
+  }
+
   // ==========================
-  // DÉ VIRTUEL
+  // DÉ (INDÉPENDANT)
   // ==========================
   function rollDice() {
     const diceValue = Math.floor(Math.random() * 6) + 1;
@@ -110,4 +123,5 @@ document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("rollDice").addEventListener("click", rollDice);
   document.getElementById("nextQuestion").addEventListener("click", () => loadNewQuestion(true));
   document.getElementById("showAnswer").addEventListener("click", showAnswer);
+
 });
