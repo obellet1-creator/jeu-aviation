@@ -14,9 +14,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const timerNumber = document.getElementById("timer-number");
   const circumference = 2 * Math.PI * 50;
 
-  // 🔊 Sons
+  // 🔊 Son du timer (musique)
   const tickSound = new Audio("sounds/tick.mp3");
   tickSound.volume = 0.3;
+  tickSound.loop = true;
 
   // ==========================
   // INITIALISATION TIMER
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .then(response => response.json())
     .then(data => {
       questions = data;
-      loadNewQuestion(false); // première question sans démarrer le timer
+      loadNewQuestion(false); // première question sans timer
     })
     .catch(error => {
       document.getElementById("question").textContent =
@@ -64,34 +65,27 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // ==========================
-  // TIMER AVEC ACCÉLÉRATION
+  // TIMER (MUSIQUE CONTINUE)
   // ==========================
   function resetTimer() {
     clearInterval(timerInterval);
     timeLeft = timerDuration;
     updateTimerDisplay();
+    tickSound.pause();
+    tickSound.currentTime = 0;
   }
 
   function startTimer() {
     clearInterval(timerInterval);
+    tickSound.play();
 
     timerInterval = setInterval(() => {
       timeLeft--;
       updateTimerDisplay();
 
-      // 🔊 Tick normal
-      if (timeLeft > 10) {
-        playTick();
-      }
-
-      // 🔥 Accélération dans les 10 dernières secondes
-      if (timeLeft <= 10 && timeLeft > 0) {
-        playTick();
-        setTimeout(playTick, 300); // second tick rapide
-      }
-
       if (timeLeft <= 0) {
         clearInterval(timerInterval);
+        tickSound.pause();
         showAnswer();
       }
     }, 1000);
@@ -104,30 +98,29 @@ document.addEventListener("DOMContentLoaded", function() {
     circle.style.strokeDashoffset = offset;
   }
 
-  function playTick() {
-    tickSound.currentTime = 0;
-    tickSound.play();
-  }
-
   // ==========================
-  // DÉ (INDÉPENDANT) AVEC ANIMATION
+  // 🎲 DÉ AVEC ANIMATION + ÉCLAT FINAL
   // ==========================
   function rollDice() {
     const diceResult = document.getElementById("dice-result");
-    const finalValue = Math.floor(Math.random() * 6) + 1; // vrai résultat
+    const finalValue = Math.floor(Math.random() * 6) + 1;
     let count = 0;
 
+    // reset effet victoire
+    diceResult.classList.remove("dice-win");
+
     const interval = setInterval(() => {
-      const randomNum = Math.floor(Math.random() * 6) + 1;
-      diceResult.textContent = randomNum;
+      diceResult.textContent = Math.floor(Math.random() * 6) + 1;
       count++;
 
-      // Après 10 changements rapides (~0,5 seconde)
       if (count >= 10) {
         clearInterval(interval);
-        diceResult.textContent = finalValue; // affichage du résultat final
+        diceResult.textContent = finalValue;
+
+        // ✨ éclat victoire
+        diceResult.classList.add("dice-win");
       }
-    }, 50); // vitesse de défilement
+    }, 50);
   }
 
   // ==========================
