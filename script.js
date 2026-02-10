@@ -110,11 +110,24 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // ==========================
-  // DÉ (INDÉPENDANT)
+  // DÉ (INDÉPENDANT) AVEC ANIMATION
   // ==========================
   function rollDice() {
-    const diceValue = Math.floor(Math.random() * 6) + 1;
-    document.getElementById("dice-result").textContent = diceValue;
+    const diceResult = document.getElementById("dice-result");
+    const finalValue = Math.floor(Math.random() * 6) + 1; // vrai résultat
+    let count = 0;
+
+    const interval = setInterval(() => {
+      const randomNum = Math.floor(Math.random() * 6) + 1;
+      diceResult.textContent = randomNum;
+      count++;
+
+      // Après 10 changements rapides (~0,5 seconde)
+      if (count >= 10) {
+        clearInterval(interval);
+        diceResult.textContent = finalValue; // affichage du résultat final
+      }
+    }, 50); // vitesse de défilement
   }
 
   // ==========================
